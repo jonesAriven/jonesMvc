@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
+  <display-name>jonesMvc</display-name>
+<welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list> 
+   <servlet>
+    <!-- springMvc最主要的部分，控制扫描哪些包 -->
+  	<servlet-name>DispatherServlet</servlet-name>
+  	<servlet-class>com.swdeve.servlet.JonesDispatherServlet</servlet-class>
+  	<load-on-startup>0</load-on-startup>
+  </servlet> 
+  <servlet-mapping>
+  	<servlet-name>DispatherServlet</servlet-name>
+  	<!-- 注意此处的“/”一定不要写成“\”了 -->
+  	<url-pattern>/</url-pattern>
+  </servlet-mapping> 
+</web-app>
