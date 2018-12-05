@@ -10,6 +10,7 @@
   		<groupId>javax.Servlet</groupId>
   		<artifactId>servlet-api</artifactId>
   		<version>2.5</version>
+  		<!-- 该属性避免打包时与jdk冲突，具体原理还不清楚 -->
   		<scope>provided</scope>
   	</dependency>
   	
